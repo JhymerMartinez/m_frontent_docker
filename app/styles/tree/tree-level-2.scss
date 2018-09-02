@@ -1,0 +1,66 @@
+.tree-content{
+  .tree{
+    &.second-level{
+
+      .neuron {
+        width: 80px;
+        height: 80px;
+      }
+
+      .tree-neuron-root{
+        position: relative;
+        left: 185px;
+        bottom: 340px;
+      }
+
+      .second-level {
+        &-0 {
+          bottom: 520px;
+          left: 70px;
+        }
+        &-1 {
+          bottom: 680px;
+          left: 140px;
+        }
+        &-2 {
+          bottom: 760px;
+          left: 255px;
+        }
+        &-3 {
+          bottom: 760px;
+          left: 325px;
+        }
+      }
+      .branch-level-2{
+        position: absolute;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        left: 0px;
+      }
+      .second-level-branch {
+        &-0 {
+          &.florecida{
+            background-image: url(../images/tree/level-2/rama_izq.png);
+          }
+        }
+        &-1 {
+          &.florecida{
+            background-image: url(../images/tree/level-2/rama_centro_izq.png);
+          }
+        }
+        &-2 {
+          &.florecida{
+            background-image: url(../images/tree/level-2/rama_centro_dere.png);
+          }
+        }
+        &-3 {
+          &.florecida{
+            background-image: url(../images/tree/level-2/rama_dere.png);
+          }
+        }
+      }
+    }
+  }
+}

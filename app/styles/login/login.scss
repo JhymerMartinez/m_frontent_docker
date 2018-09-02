@@ -1,0 +1,41 @@
+@import "shared/colors";
+
+.login-view{
+  background-image: url(../images/login/bg.png);
+  background-size: 1280px 720px;
+  background-position: top right;
+  form{
+    right: 200px;
+    top: 15%;
+    width: 440px;
+
+    @media (max-width: 560px) {
+      top: 16%;
+    }
+    @media (max-height: 510px) {
+      top: 17%;
+    }
+  }
+  .legend-browser{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 400px;
+    top: 650px;
+    font-family: museo;
+    font-size: 20px;
+    height: 20px;
+    font-weight: bold;
+  }
+  .login-option{
+    span{
+      position: absolute;
+      right: 50px;
+      cursor: pointer;
+      color: #fef9bf;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: FontMoi-Title;
+    }
+  }
+}

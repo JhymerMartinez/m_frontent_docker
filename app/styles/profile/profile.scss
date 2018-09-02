@@ -1,0 +1,379 @@
+.profile-content {
+  .overflow-scroll {
+    overflow-y: hidden;
+  }
+
+  .flecha-sidebar {
+    top: 45%;
+  }
+
+  .frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .frame-container {
+    width: 95%;
+    height: 84%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 2%;
+  }
+  .select-images-edit {
+    .col-20 {
+      max-width: unset;
+    }
+  }
+}
+.profile {
+  background-color: transparent;
+
+  .profile-user {
+    .frame-container {
+      position: relative;
+      background-repeat: no-repeat;
+      background-image: url("../images/perfil-caja.png");
+      background-size: 100% 100%;
+
+      .profile-wrapper {
+        width: 100%;
+        padding: 0 90px 0 120px;
+        height: 72%;
+
+        .header-wrapper {
+          padding-top: 20px;
+          border-bottom: 3px solid $moiDarkGreen;
+
+          .user-image {
+            img {
+              width: 80px;
+            }
+          }
+
+          .user-name {
+            color: $moiDarkGreen;
+            font-size: 45px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-family: FontMoi-Title;
+            width: 100%;
+            line-height: 45px;
+          }
+
+          .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn-profile {
+              padding: 10px 15px;
+              text-align: center;
+              color: $moiDarkGreen;
+              font-family: FontMoi-Title;
+              font-weight: bold;
+              background-image: url("../images/btn-perfil.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .content-wrapper {
+          padding-top: 15px;
+          height: 100%;
+
+          .more-details {
+            padding-right: 10px;
+            overflow: hidden;
+            position: relative;
+
+            .user-description {
+              background: #889d66;
+              padding: 10px 15px;
+              font-weight: bold;
+              height: 25%;
+              border: 2px solid #8f9a59;
+
+              .title {
+                color: $moiDarkGreen;
+                font-family: FontMoi-Title;
+                font-size: 15px;
+              }
+
+              .info {
+                color: $moiDarkGreen;
+                font-family: FontMoi-Title;
+                font-size: 15px;
+                color: bisque;
+                font-weight: bold;
+                padding-left: 15px;
+                span{
+                  cursor: pointer;
+                }
+              }
+
+              @media (max-width: 900px) {
+                .info {
+                  font-size: 12px;
+                }
+              }
+
+              .btn-wrapper {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .btn-add-friend {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 10px 15px;
+                  text-align: center;
+                  color: $moiDarkGreen;
+                  font-family: FontMoi-Title;
+                  font-weight: bold;
+                  background-image: url("../images/btn-perfil.png");
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
+                  cursor: pointer;
+
+                  .title {
+                    max-width: 80px;
+                  }
+
+                  .plus-icon {
+                    padding: 2px 5px;
+                    border: 1px solid $moiDarkGreen;
+                  }
+                }
+
+                .btn-friends {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 15px;
+                  text-align: center;
+                  color: $moiDarkGreen;
+                  font-family: FontMoi-Title;
+                  font-weight: bold;
+                  background-image: url("../images/btn-perfil.png");
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
+                  cursor: pointer;
+
+                  .title {
+                    max-width: 80px;
+                    padding-right: 10px;
+                  }
+
+                  .friend-img {
+                    width: 30px;
+                  }
+                }
+              }
+            }
+
+            .user-feedback {
+              background: #889d66;
+              margin-top: 15px;
+              padding: 5px 10px;
+              border: 2px solid #8f9a59;
+              height: 75%;
+
+              .tabs-options {
+                text-align: center;
+
+                .option {
+                  padding: 5px;
+                  border: 2px solid #7fb25b;
+                  color: bisque;
+                  cursor: pointer;
+                }
+                .tab-selected {
+                  background: rgba(123, 121, 76, 0.62);
+                }
+              }
+              .content-panel {
+                border: 2px solid #7fb25b;
+                overflow-y: visible;
+                overflow-y: scroll;
+                height: 100%;
+                .partial{
+                  width: 100%;
+                  height: 100%;
+                  position: relative;
+                  .grid-contents {
+                    flex-wrap: wrap;
+
+                    .content-kind-contents {
+                      cursor: pointer;
+
+                      img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 90px;
+                      }
+
+                      .format-image {
+                        min-height: 110px;
+                        width: 100%;
+                      }
+                    }
+                  }
+                  ion-item {
+                    background: transparent;
+                    border-color: transparent;
+                    padding: 3px;
+
+                    .item-award {
+                      background: transparent;
+                      border-radius: 5px;
+                      border: 3px solid #888b4a;
+                      color: bisque;
+                      font-size: 15px;
+                      font-family: FontMoi-Title;
+                      padding: 10px;
+
+                      .btn-view-table {
+                        right: 15px;
+                        position: absolute;
+                        cursor: pointer;
+                      }
+                      .description-content-learned {
+                        white-space: pre-wrap;
+                      }
+                    }
+
+                    @media (max-width: 900px) {
+                      .item-award {
+                        font-size: 12px;
+                      }
+                    }
+                  }
+                  .overflow-scroll {
+                    overflow-y: visible;
+                  }
+                  .grid-certificates::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                    border: 1px solid rgba(123, 121, 76, 0.62);
+                    width: 5px;
+                  }
+                  .grid-certificates::-webkit-scrollbar {
+                    width: 5px;
+                    background-color: transparent;
+                    border-radius: 10px;
+                  }
+                  .grid-certificates::-webkit-scrollbar-thumb {
+                    border-radius: 25px;
+                    background-color: rgba(123, 121, 76, 0.62);
+                  }
+
+                  .grid-certificates {
+                    flex-wrap: wrap;
+                    height: 225px;
+                    width: 450px;
+                    .scroll{
+                      display: flex;
+                      flex-wrap: wrap;
+                    }
+                    .certificate {
+                      position: relative;
+                      .content-cetificates {
+                        cursor: pointer;
+                        img {
+                          object-fit: cover;
+                          width: 100%;
+                          height: 90px;
+                        }
+                        .format-image {
+                          min-height: 110px;
+                          width: 100%;
+                        }
+                      }
+                    }
+                    .remove-certificate {
+                      background: url("../images/btn_delete_content.png");
+                      background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                      width: 20px;
+                      height: 20px;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+              .content-panel::-webkit-scrollbar-track {
+                border-radius: 10px;
+                border: 1px solid rgba(123, 121, 76, 0.62);
+                width: 5px;
+              }
+              .content-panel::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+                border-radius: 10px;
+              }
+              .content-panel::-webkit-scrollbar-thumb {
+                border-radius: 25px;
+                background-color: rgba(123, 121, 76, 0.62);
+              }
+            }
+          }
+
+          .tree-preview {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+
+            .tree {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 5px;
+              z-index: 2;
+            }
+
+            .flowerpot {
+              width: 260px;
+              height: 80px;
+              bottom: 0;
+              z-index: 1;
+            }
+          }
+        }
+      }
+      @media (max-height: 700px) {
+        .profile-wrapper{
+          height: 70%;
+        }
+      }
+      @media (max-height: 620px) {
+        .profile-wrapper{
+          height: 67%;
+        }
+      }
+      @media (max-height: 580px) {
+        .profile-wrapper{
+          height: 65%;
+        }
+      }
+      @media (max-height: 520px) {
+        .profile-wrapper{
+          height: 63%;
+        }
+      }
+      @media (max-height: 500px) {
+        .profile-wrapper{
+          height: 61%;
+        }
+      }
+    }
+  }
+}

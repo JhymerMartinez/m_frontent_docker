@@ -1,0 +1,7 @@
+.tree
+  .tree-img
+    img(src="images/tree/tronco-bebe.png")
+    img.tronco-root(src="images/tree/level-1/tronco.png"
+      ng-if="treeVm.neurons.root.state === 'florecida'")
+  .tree-neuron-root(class="{{treeVm.neurons.root.state}} neuron")
+    moi-neuron(options="treeVm.neurons.root" id='root' level="1")

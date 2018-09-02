@@ -1,0 +1,10 @@
+ion-view.neuron-view(view-title='{{vmNeuron.neuron.title}}')
+  ion-content
+    .main-view
+      .frame-container.content-view
+        grid-contents(options="vmNeuron.contentsOptions")
+    moi-frame(options="vmNeuron.frameOptions")
+    moi-buttons(options="vmNeuron.buttonsOptions")
+    moi-arrow(on-click="toggleDrawer()" orientation="right")
+    .frame-background
+  moi-sidebar

@@ -1,0 +1,99 @@
+.score-container{
+  background-image: url(../images/caja-score.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 5%;
+  height: 300px;
+  .main-image{
+    img{
+      width: 150px;
+      padding-top: 50px;
+      padding-left: 0px;
+    }
+  }
+  #title{
+    color: #EF2874;
+    text-align: center;
+  }
+  .points{
+    background: #E0E838;
+    margin: 20px;
+    padding-top: 20px;
+    text-align: center;
+    #content{
+      color: #EF2874;
+      padding: 10px;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+  .text-container{
+    padding: 20px;
+    background: #E0E838;
+    margin: 20px;
+    margin-top: 40px;
+    height: 220px;
+    overflow: auto;
+    #title{
+      font-size: 30px;
+      color: #EF2874;
+      font-weight: bold;
+    }
+    #content{
+      font-size: 27px;
+      color: #EF2874;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+  .text-containert::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border: 1px solid rgb(243, 248, 93);
+    width: 5px;
+  }
+  .text-container::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .text-container::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: rgb(243, 248, 93);
+  }
+}
+
+.controls-score{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .button-right {
+    padding: 2em 1em;
+    min-width: 170px;
+  }
+
+  .button-left {
+    padding: 2em 0.5em;
+    min-width: 170px;
+  }
+
+  .button.activated {
+    background-color: transparent;
+  }
+}
+
+.btn-score{
+  background-image: url(../images/btn.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  background-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 47px;
+  color: #FDF9BF;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px
+}

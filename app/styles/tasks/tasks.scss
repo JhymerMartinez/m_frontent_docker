@@ -1,0 +1,192 @@
+.tasks {
+  background-color: transparent;
+
+  .panel-tasks {
+    height: 100%;
+    width: 100%;
+    padding: 3rem 2rem 6rem 3rem;
+    .frame-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background-repeat: no-repeat;
+      background-image: url("../images/caja_M.png");
+      background-size: 100% 100%;
+
+      .content-title {
+        position: relative;
+        color: #4A4B21;
+        font-size: 45px;
+        font-weight: bold;
+        font-family: FontMoi-Title;
+        left: 10%;
+        top: 10%;
+      }
+
+      .divider-line {
+        position: relative;
+        background: url("../images/linea_separacionM.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 87%;
+        height: 5px;
+        top: 13%;
+        left: 10%;
+      }
+
+      .content-tasks {
+        position: absolute;
+        width: 92%;
+        top: 22%;
+        left: 3%;
+        height: 80%;
+        padding: 0px 0px 4% 4%;
+
+        .tasks-tabs {
+
+          ion-item{
+            background: transparent;
+            border-color: transparent;
+            padding: 3px;
+
+            .item-tab{
+              background: rgba(136, 139, 74, 0.5);
+              padding: 2%;
+              font-weight: bold;
+              border-radius: 5px;
+              border: 2px solid #8f9a59;
+              cursor: pointer;
+              color: #4A4B21;
+              font-size: 27px;
+              font-family: FontMoi-Title;
+              span{
+                padding-left: 20px;
+              }
+              img{
+                vertical-align: sub
+              }
+              .counter-badget {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background: #829250;
+                border: 2px solid #4a4b21;
+                font-size: 17px;
+              }
+            }
+            .tab-selected {
+              background: rgba(123, 121, 76, 0.62);
+            }
+          }
+        }
+
+        .tasks-view {
+          background: url("../images/content_task.png");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          position: relative;
+          .overflow-scroll {
+            overflow-y: visible;
+          }
+
+          .content_tasks::-webkit-scrollbar-track {
+            border-radius: 10px;
+            border: 1px solid rgba(123, 121, 76, 0.62);
+            width: 5px;
+          }
+          .content_tasks::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+            border-radius: 10px;
+          }
+          .content_tasks::-webkit-scrollbar-thumb {
+            border-radius: 25px;
+            background-color: rgba(123, 121, 76, 0.62);
+          }
+
+          .content_tasks {
+            padding: 10px;
+            .scroll{
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .content{
+              position: relative;
+              .content-kind-contents {
+                img {
+                  object-fit: cover;
+                  width: 100%;
+                  height: 135px;
+                }
+                .leyend-bottom {
+                  font-family: futura;
+                }
+              }
+            }
+
+            .remove-task {
+              background: url("../images/btn_delete_content.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              cursor: pointer;
+            }
+
+            .row-notification {
+              width: 100%;
+            }
+
+            .note {
+              position: relative;
+              background: url("../images/note_content.png");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              margin: 5px;
+              color: #4A4B21;
+              font-size: 20px;
+              font-family: FontMoi-Title;
+              height: 140px;
+              .text-title {
+                font-weight: bold;
+              }
+              .text-notes {
+                width: 100%;
+                padding: 10px;
+                overflow: hidden;
+                height: 111px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 585px) {
+  .tasks {
+    .panel-tasks {
+      .frame-container {
+        .content-tasks {
+          .tasks-tabs {
+            ion-item{
+              .item-tab{
+                padding: 1%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

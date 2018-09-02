@@ -1,0 +1,29 @@
+.content-title-settings{
+  color: $moiDarkGreen;
+  font-size: 38px;
+  font-weight: bold;
+  font-family: FontMoi-Title;
+  width: 100%;
+  line-height: 50px;
+  &.left-padding {
+    margin-left: 12%;
+  }
+}
+
+.content-subtitle-settings{
+  color: #d2d583;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: FontMoi-Title;
+  margin-left: -8px;
+}
+
+.border-bottom-settings{
+  border-bottom: 4px solid $moiDarkGreen;
+  margin-bottom: 20px;
+  margin-top: 11px;
+  margin-left: 10px;
+  padding-bottom: 6%;
+  width: 95%;
+}
+

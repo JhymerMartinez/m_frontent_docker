@@ -1,0 +1,123 @@
+.btn-learn {
+  position: fixed;
+  bottom: -1%;
+  right: 0.2%;
+  min-width: 11.5%;
+  min-height: 19.5%;
+  background-image: url(../images/btn-learn.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.btn-learn-wrapper {
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.btn-learn-gif {
+  position: fixed;
+  right: 0.5%;
+  bottom: -4%;
+  width: 10%;
+  .btn-wrapper {
+    position: relative;
+    .idle {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.btn-lg-gif {
+  cursor: pointer;
+  width: 10%;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.btn-md-gif {
+  cursor: pointer;
+  width: 15%;
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.btn-sm-gif {
+  position: relative;
+  top: 15%;
+  width: 16%;
+  cursor: pointer;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.btn-show-tasks-gif {
+  position: relative;
+  right: 3%;
+  top: 5%;
+
+  .notifications-badget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #fd3d2d;
+    border: 2px solid white;
+    color: white;
+    font-family: FontMoi-Title;
+    font-weight: bold;
+    font-family: FontMoi-Title;
+  }
+}
+
+.btn-search-gif {
+  position: relative;
+  right: 0.4%;
+  top: 5%;
+
+  .btn-wrapper {
+    position: relative;
+
+    .idle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.btn-share-gif {
+  right: 7%;
+}
+
+.btn-save-tasks-gif {
+  right: 13%;
+}
+
+.btn-recomendation-gif {
+  .btn-wrapper {
+    position: relative;
+
+    .idle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.arrow {
+  position: absolute;
+  left: 1%;
+  top: 0.5%;
+  z-index: 5;
+  transition: 0.3 ease;
+  height: 14%;
+  width: 9%;
+
+  &:hover {
+    .arrow-img {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.back-arrow {
+  .arrow-img {
+    background-image: url('../images/back-arrow.png');
+    background-size: 100% 100%;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    bottom: 30%;
+    left: 25%;
+  }
+}

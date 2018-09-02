@@ -1,0 +1,27 @@
+.test-container
+  .row(ng-repeat="question in vmTest.questions",
+      ng-show="question.showQuestion")
+    .main-image.col
+      img(ng-src="{{question.media_url}}")
+    .question.col-50
+      .test
+        h1 {{question.title}}
+        .answer(ng-repeat="answer in question.possible_answers track by $index",
+                ng-class="{'answer-selected': answer.selected }",
+                ng-style="vmTest.cssOptions.styles[$index+1]"
+                ng-click="vmTest.selectAnswer(question.content_id, answer)"
+                tooltip-moi="Elegir esta alternativa"
+                tooltip-position="up"
+                ng-mouseover="vmTest.increaseSize(true, vmTest.cssOptions, $index+1)"
+                ng-mouseleave="vmTest.increaseSize(false, vmTest.cssOptions, $index+1)")
+          h4 {{answer.text}}
+    .pista.col
+      span
+sound-button.controls(
+          ng-style="vmTest.cssOptions.styles[0]"
+          image-url="images/next-test.png"
+          ng-click="vmTest.next()"
+          tooltip-moi="Continuar a la siguiente pregunta"
+          tooltip-position="up"
+          ng-mouseover="vmTest.increaseSize(true, vmTest.cssOptions, 0)"
+          ng-mouseleave="vmTest.increaseSize(false, vmTest.cssOptions, 0)")

@@ -1,0 +1,50 @@
+ion-view.profile-content.profile(view-title='{{vm.neuron.title}}')
+  ion-content
+    back-button.arrow.back-arrow
+    moi-arrow(on-click="toggleDrawer()" orientation="right")
+    .frame.profile-user
+      .frame-container
+        .profile-wrapper
+          .header-wrapper.row
+            .col-80.row
+              .user-image
+                img(src="images/user.png")
+              .user-name.col
+                {{vmProfile.user.username}}
+            .btns.col-20
+              .btn-profile(ng-if="vmProfile.isCurrentUser" ui-sref="profileEdit")
+                {{ ::'buttons.edit-profile' | translate }}
+          .content-wrapper.row
+            .more-details.col-50
+              .user-description.row
+                .container-logros
+                  .title
+                    | Logros
+                  .info(ng-click="vmProfile.changeTab('awards')")
+                    span.award
+                      | Contenidos aprendidos en total: {{vmProfile.user.content_summary.current_learnt_contents}}/{{vmProfile.user.content_summary.total_approved_contents}}
+                    br
+                    span
+                      | Tests sin errores: {{vmProfile.user.successful_tests}}
+                .btn-wrapper.col-30(ng-if="!vmProfile.buttonsOptions.readOnly")
+                  .btn-add-friend(ng-if="!vmProfile.isCurrentUser")
+                    .title {{ ::'buttons.add-friend' | translate }}
+                    .plus-icon +
+                  .btn-friends(ng-if="vmProfile.isCurrentUser" ui-sref="friends")
+                    .title {{ ::'buttons.friends' | translate }}
+                    img.friend-img(src="images/user.png")
+              .user-feedback
+                .tabs-options.row
+                  .option.col-33(ng-repeat='tab in vmProfile.tabs'
+                                ng-class="{'tab-selected': tab.selected }"
+                                ng-click="vmProfile.changeTab(tab.field)")
+                    span
+                      | {{::tab.name}}
+                .content-panel.row
+                  .partial(ng-include="vmProfile.viewSelected")
+            .tree-preview.col-50
+              img.tree(ng-src="{{vmProfile.user.tree_image}}")
+      moi-frame(options="vmProfile.frameOptions")
+      moi-buttons(options="vmProfile.buttonsOptions")
+      .btn-learn
+  moi-sidebar

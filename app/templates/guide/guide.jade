@@ -1,0 +1,10 @@
+ion-view.frame-all-buttons.tasks(view-title='Tasks')
+  ion-content
+    back-button.arrow.back-arrow
+    moi-arrow(on-click="toggleDrawer()" orientation="right")
+    .frame
+      .frame-container
+        img.guide-description(src="images/guia_botones.png")
+      moi-buttons(options="guidemodel.buttonsOptions")
+      .btn-learn
+  moi-sidebar

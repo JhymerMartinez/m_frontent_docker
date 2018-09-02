@@ -1,0 +1,14 @@
+version: '3'
+services:
+  webapp:
+    image: moi-front-end
+    build: .
+    command: grunt serve
+    ports:
+      - "8100:8100"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/usr/src/moi-front-end
+      - /usr/src/moi-front-end/node_modules
+      - /usr/src/moi-front-end/app/bower_components

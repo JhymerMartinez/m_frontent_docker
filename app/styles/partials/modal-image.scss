@@ -1,0 +1,97 @@
+.transparent {
+  background-color: transparent;
+}
+.modal-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/marco_modal.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  padding: 4%;
+  &.violeta {
+    background: url(../images/themes/violeta/marco_modal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.azul{
+    background: url(../images/themes/azul/marco_modal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.rojo{
+    background: url(../images/themes/rojo/marco_modal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.amarillo{
+    background: url(../images/themes/amarillo/marco_modal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.verde{
+    background: url(../images/themes/verde/marco_modal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .btn-close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../images/close_modal.png);
+    background-repeat: no-repeat;
+    background-size: 2.5rem 2.5rem;
+    cursor: pointer;
+    &.violeta {
+      background: url(../images/themes/violeta/close_modal.png);
+      background-repeat: no-repeat;
+      background-size: 2.5rem 2.5rem;
+    }
+    &.azul{
+      background: url(../images/themes/azul/close_modal.png);
+      background-repeat: no-repeat;
+      background-size: 2.5rem 2.5rem;
+    }
+    &.rojo{
+      background: url(../images/themes/rojo/close_modal.png);
+      background-repeat: no-repeat;
+      background-size: 2.5rem 2.5rem;
+    }
+    &.amarillo{
+      background: url(../images/themes/amarillo/close_modal.png);
+      background-repeat: no-repeat;
+      background-size: 2.5rem 2.5rem;
+    }
+    &.verde{
+      background: url(../images/themes/verde/close_modal.png);
+      background-repeat: no-repeat;
+      background-size: 2.5rem 2.5rem;
+    }
+  }
+  embed-video {
+    width: 93%;
+    height: 88%;
+  }
+  .content-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+/* Fix modal backdrop for smaller devices */
+@media (max-width: 679px) {
+  .active .modal-backdrop-bg {
+    opacity: .5;
+  }
+  .modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    background-color: #000;
+    opacity: 0;
+  }
+}

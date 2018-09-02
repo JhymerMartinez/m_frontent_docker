@@ -1,0 +1,45 @@
+body {
+  .application {
+    @include background-size(cover);
+    background-image: url(../images/landscape_b.png);
+    background-repeat: no-repeat;
+    & > ion-view {
+      min-width: 800px;
+      min-height: 482px;
+      .overflow-scroll{
+        overflow-y: hidden;
+      }
+    }
+  }
+
+  .bar-header{
+    display: none;
+  }
+
+  .loading-app {
+    @include background-size(cover);
+    background-image: url(../images/landscape_b.png);
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .loader-container {
+        display: flex;
+        justify-content: center;
+        .loader{
+          background-image: url(../images/loading.gif);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          width: 3.6em;
+          height: 3.6em;
+        }
+      }
+    }
+  }
+}
